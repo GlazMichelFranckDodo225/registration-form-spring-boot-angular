@@ -10,8 +10,7 @@ import lombok.NoArgsConstructor;
 @Data @NoArgsConstructor @AllArgsConstructor @Builder
 @Table(name = "tbl_employee")
 public class Employee {
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "employee_id")
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long employeeId;
     @Column(name = "employee_name", nullable = false, length = 30)
     private String employeeName;
